@@ -1,15 +1,11 @@
 import { Component } from "react";
 
 class Counter extends Component {
-  constructor(props) {
-    // 컴포넌트 생성자 메서드
-    super(props); // 부모 클래스 생성자의 참조 (생성자 내부에서도 this.props를 정상적으로 사용하기 위해)
-    this.state = {
-      // state의 초깃값 설정하기
-      number: 0,
-      number2: 10,
-    };
-  }
+  state = {
+    // constructor 메소드 선언하지 않고 state 초깃값 설정
+    number: 0,
+    number2: 10,
+  };
   render() {
     const { number, number2 } = this.state; // state를 조회할 때는 this.state로 조회
     return (

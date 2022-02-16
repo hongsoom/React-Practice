@@ -1,0 +1,19 @@
+.addButton {
+  color: red;
+  background-color: #afc4e7;
+  padding: 24px;
+  margin-left: 30vw;
+  margin-top: 20vh;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.removeButton {
+  color: green;
+  background-color: yellow;
+  padding: 24px;
+  margin-left: 30vw;
+  margin-top: 20vh;
+  cursor: pointer;
+  font-size: 25px;
+}
