@@ -22,6 +22,13 @@ class EventPractice extends Component {
     });
   };
 
+  handleKeyPress = (e) => {
+    // Enter 키를 눌렀을 때, handleClick 메서드 호출
+    if (e.key === "Enter") {
+      this.handleClick();
+    }
+  };
+
   render() {
     return (
       <div>
@@ -39,6 +46,7 @@ class EventPractice extends Component {
           placeholder="아무거나 입력해 보세요"
           value={this.state.message}
           onChange={this.handleChange}
+          onKeyPress={this.handleKeyPress} // 두번째 input에서 텍스트를 입력하고 Enter를 눌렀을 때, handleClick 메서드 실행
         />
         <button onClick={this.handleClick}>확인</button>
       </div>
