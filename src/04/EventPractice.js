@@ -20,6 +20,16 @@ class EventPractice extends Component {
             });
           }}
         />
+        <button
+          onClick={() => {
+            alert(this.state.message); // 입력한 값 메시지 박스로 띄움
+            this.setState({
+              message: "", // 공백
+            });
+          }}
+        >
+          확인
+        </button>
       </div>
     );
   }
