@@ -6,6 +6,7 @@ import EventPractice from "./04/EventPractice";
 import EventPractice2 from "./04/EventPractice2";
 import FuctionEventPractice from "./04/Function_EventPractice";
 import LifeCycleSample from "./07/lLifeCycle/LifeCycleSample";
+import ErrorBoundary from "./07/lLifeCycle/ErrorBoundary";
 
 //const App = () => {
 // return <Counter />;
@@ -34,10 +35,13 @@ class App extends Component {
   render() {
     // 버튼을 렌더링하고, 누를 때마다 handleClick 메소드 호출
     // LifeCycleSample 컴포넌트에 color 값을 props로 설정
+    // ErrorBoundarY가 LifeCycleSample를 감싸줌
     return (
       <div>
         <button onClick={this.handleClick}>랜덤 색상</button>
-        <LifeCycleSample color={this.state.color} />
+        <ErrorBoundary>
+          <LifeCycleSample color={this.state.color} />
+        </ErrorBoundary>
       </div>
     );
   }
