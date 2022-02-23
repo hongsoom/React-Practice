@@ -7,7 +7,7 @@ import EventPractice2 from "./04/EventPractice2";
 import FuctionEventPractice from "./04/Function_EventPractice";
 import LifeCycleSample from "./07/LifeCycle/LifeCycleSample";
 import ErrorBoundary from "./07/LifeCycle/ErrorBoundary";
-import { Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import About from "./13/ReactRouter/About";
 import Home from "./13/ReactRouter/Home";
 
@@ -18,10 +18,10 @@ const App = () => {
   //return <EventPractice2 />;
   // return <FuctionEventPractice />;
   return (
-    <div>
-      <Route path="/" Component={Home} exact={true} />
-      <Route path="/about" Component={About} />
-    </div>
+    <Routes>
+      <Route path="/" element={Home()} exact={true} />
+      <Route path="/about" element={About()} />
+    </Routes>
   );
 };
 
