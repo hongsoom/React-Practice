@@ -12,13 +12,9 @@ import About from "./13/ReactRouter/About";
 import Home from "./13/ReactRouter/Home";
 
 const App = () => {
-  // return <Counter />;
-  // return <Say />;
-  //return <EventPractice />;
-  //return <EventPractice2 />;
-  // return <FuctionEventPractice />;
   return (
     // exact가 true이면 지정된 경로와 정확히 일치하는 경우에만 컴포넌트를 보여줌
+
     <div>
       <ul>
         <li>
@@ -30,8 +26,8 @@ const App = () => {
       </ul>
       <hr />
       <Routes>
-        <Route path="/" element={Home()} exact={true} />
-        <Route path="/about" element={About()} />
+        <Route path="/" element={<Home />} exact={true} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   );
