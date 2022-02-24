@@ -10,11 +10,11 @@ import ErrorBoundary from "./07/LifeCycle/ErrorBoundary";
 import { Route, Routes, Link } from "react-router-dom";
 import About from "./13/ReactRouter/About";
 import Home from "./13/ReactRouter/Home";
+import Profile from "./13/ReactRouter/Profile";
 
 const App = () => {
   return (
     // exact가 true이면 지정된 경로와 정확히 일치하는 경우에만 컴포넌트를 보여줌
-
     <div>
       <ul>
         <li>
@@ -23,11 +23,18 @@ const App = () => {
         <li>
           <Link to="/about">소개</Link>
         </li>
+        <li>
+          <Link to="/profile/sumin">sumin 프로필</Link>
+        </li>
+        <li>
+          <Link to="/profile/seungmin">seungmin 프로필</Link>
+        </li>
       </ul>
       <hr />
       <Routes>
         <Route path="/" element={<Home />} exact={true} />
         <Route path="/about" element={<About />} />
+        <Route path="/profile/:username" element={<Profile />} />
       </Routes>
     </div>
   );
