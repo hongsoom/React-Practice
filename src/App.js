@@ -7,7 +7,7 @@ import EventPractice2 from "./04/EventPractice2";
 import FuctionEventPractice from "./04/Function_EventPractice";
 import LifeCycleSample from "./07/LifeCycle/LifeCycleSample";
 import ErrorBoundary from "./07/LifeCycle/ErrorBoundary";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import About from "./13/ReactRouter/About";
 import Home from "./13/ReactRouter/Home";
 
@@ -18,10 +18,22 @@ const App = () => {
   //return <EventPractice2 />;
   // return <FuctionEventPractice />;
   return (
-    <Routes>
-      <Route path="/" element={Home()} exact={true} />
-      <Route path="/about" element={About()} />
-    </Routes>
+    // exact가 true이면 지정된 경로와 정확히 일치하는 경우에만 컴포넌트를 보여줌
+    <div>
+      <ul>
+        <li>
+          <Link to="/">홈</Link>
+        </li>
+        <li>
+          <Link to="/about">소개</Link>
+        </li>
+      </ul>
+      <hr />
+      <Routes>
+        <Route path="/" element={Home()} exact={true} />
+        <Route path="/about" element={About()} />
+      </Routes>
+    </div>
   );
 };
 
