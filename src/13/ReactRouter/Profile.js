@@ -13,9 +13,9 @@ const data = {
 
 //
 const Profile = () => {
-  const params = useParams(); // URL 인자들의 key/value짝들의 객체를 반환
-  console.log(params);
-  const profile = data[params.username];
+  const params = useParams(); // parameter를 받아와서 변수 params에 넣음
+  // console.log(params);
+  const profile = data[params.username]; // 배열 data의 sumin, seungmin 값을 profile에 넣음
   if (!profile) {
     return <div>존재하지 않는 사용자입니다.</div>;
   }

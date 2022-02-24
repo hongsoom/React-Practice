@@ -15,6 +15,7 @@ import Profile from "./13/ReactRouter/Profile";
 const App = () => {
   return (
     // exact가 true이면 지정된 경로와 정확히 일치하는 경우에만 컴포넌트를 보여줌
+    // username이라는 동적 라우팅값을 주었고 username이라는 parameter를 Profile로 보냄
     <div>
       <ul>
         <li>
