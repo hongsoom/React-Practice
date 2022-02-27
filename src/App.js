@@ -11,6 +11,7 @@ import { Route, Routes, Link } from "react-router-dom";
 import About from "./13/ReactRouter/About";
 import Home from "./13/ReactRouter/Home";
 import Profile from "./13/ReactRouter/Profile";
+import Profiles from "./13/ReactRouter/Profiles";
 
 const App = () => {
   return (
@@ -25,17 +26,14 @@ const App = () => {
           <Link to="/about">소개</Link>
         </li>
         <li>
-          <Link to="/profile/sumin">sumin 프로필</Link>
-        </li>
-        <li>
-          <Link to="/profile/seungmin">seungmin 프로필</Link>
+          <Link to="/profiles">프로필</Link>
         </li>
       </ul>
       <hr />
       <Routes>
         <Route path="/" element={<Home />} exact={true} />
         <Route path="/about" element={<About />} />
-        <Route path="/profile/:username" element={<Profile />} />
+        <Route path="/profiles/*" element={<Profiles />} />
       </Routes>
     </div>
   );
