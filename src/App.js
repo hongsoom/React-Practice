@@ -17,9 +17,11 @@ import Counter1 from "./08/Hooks/Counter";
 import { useState } from "react";
 import Info from "./08/Hooks/Info";
 import ReducerCounter from "./08/Hooks/ReducerCounter";
+import ReducerInfo from "./08/Hooks/ReducerInfo";
 
 const App = () => {
-  return <ReducerCounter />;
+  return <ReducerInfo />;
+  //<ReducerCounter />;
 
   /*const [visible, setVisible] = useState(false); // 초기값 false
   return (
