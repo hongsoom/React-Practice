@@ -14,12 +14,25 @@ import Profile from "./13/ReactRouter/Profile";
 import Profiles from "./13/ReactRouter/Profiles";
 import HistorySample from "./13/ReactRouter/HistorySample";
 import Counter1 from "./08/Hooks/Counter";
+import { useState } from "react";
 import Info from "./08/Hooks/Info";
 
 const App = () => {
+  const [visible, setVisible] = useState(false); // 초기값 false
   return (
+    <div>
+      <button
+        onClick={() => {
+          setVisible(!visible); // true
+        }}
+      >
+        {visible ? "숨기기" : "보이기"}{" "}
+        {/* Visible이 true일때 숨기기 버튼 보임, false일때 보이기 버튼 보임*/}
+      </button>
+      <hr />
+      {visible && <Info />} {/* Visible이 true일때 Info component 보임*/}
+    </div>
     //<Counter1 />
-    <Info />
 
     /*
     // exact가 true이면 지정된 경로와 정확히 일치하는 경우에만 컴포넌트를 보여줌
