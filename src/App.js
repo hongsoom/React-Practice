@@ -14,10 +14,12 @@ import Profile from "./13/ReactRouter/Profile";
 import Profiles from "./13/ReactRouter/Profiles";
 import HistorySample from "./13/ReactRouter/HistorySample";
 import Counter1 from "./08/Hooks/Counter";
+import Info from "./08/Hooks/Info";
 
 const App = () => {
   return (
-    <Counter1 />
+    //<Counter1 />
+    <Info />
 
     /*
     // exact가 true이면 지정된 경로와 정확히 일치하는 경우에만 컴포넌트를 보여줌
