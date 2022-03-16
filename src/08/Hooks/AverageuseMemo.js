@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 const getAverage = (numbers) => {
   console.log("평균값 계산 중..");
   if (numbers.length === 0) return 0;
-  const sum = numbers.reduce((a, b) => a + b);
+  const sum = numbers.reduce((a, b) => a + b); // numbers라는 배열의 각 요소에 reducer 함수인 ( a + b )를 실행
   return sum / numbers.length;
 };
 
@@ -16,22 +16,24 @@ const AverageuseMemo = () => {
   };
 
   const onInsert = (e) => {
-    const NextList = list.concat(parseInt(number));
+    const NextList = list.concat(parseInt(number)); // input으로 입력 받은 number의 값들을 정수로 반환 후 기존 배열인 list( [] )에 합침
     setList(NextList);
     setNumber("");
   };
+
+  const avg = useMemo(() => getAverage(list), [list]); // useMemo(() => {실행할 함수}, 변화감지변수);
 
   return (
     <div>
       <input value={number} onChange={onChange} />
       <button onClick={onInsert}>등록</button>
       <ul>
-        {list.map((value, index) => (
-          <li key={index}>{value}</li>
+        {list.map((value, index) => ( 
+          <li key={index}>{value}</li> // 배열 list의 index를 통해 value 값 출력
         ))}
       </ul>
       <div>
-        <b>평균값:</b> {getAverage(list)}
+        <b>평균값:</b> {avg}
       </div>
     </div>
   );
