@@ -1,1 +1,3 @@
-# React-Practice
+# 📚React.js
+
+리액트를 다루는 기술을 통해 React의 학습 내용을 정리하는 리포지토리입니다.
